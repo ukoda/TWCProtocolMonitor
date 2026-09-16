@@ -64,7 +64,7 @@ A long reply or broadcast:
 
 The network must have one and only one TWC as master, or a device acting as master.  It can have 1 to 3 slaves.  A TWC is put in slave mode by setting it's rotary switch to position `F`.
 
-Only the master can send the first message type and it will supply a destination ID that matches the slave's ID that it wishes get information from or to issue a command to.
+Only the master can send the first message type and it will supply a destination ID that matches the slave's ID that it wishes get information from or to issue a command to.  The exception is slaves uses this message type when sending a neartbeat reply.
 
 When a slave receives a request or command  addressed to it it will send a reply that all devices, including the master that requested it, can see.  The master can also send the same reply type messages as a broadcast of information for all the slaves to see.
 
@@ -78,7 +78,7 @@ The checksum is the sum of all bytes messages in a message except the first and 
 
 All information message are 20 bytes or less so there is no assembly of multiple messages.  Some information, such as a vehicle's VIN number are spread over multiple messages but are assembled at layer 7, the application layer.
 
-In normal operations a slave will never send a message unless the master has requested it.  Slaves will typically send a reply with 150 to 200mS.  A master will typically not send a packet within 400mS of the last packet sent or seen.  This prevents packet collisions.  The exception is slaves at power as detailed in the Session layer section.
+In normal operations a slave will never send a message unless the master has requested it.  Slaves will typically send a reply with 150 to 200mS.  A master will typically not send a packet within 400mS of the last packet sent or seen.  This prevents packet collisions.  The exception is slaves at power up as detailed in the Session layer section.
 
 ### 5. Session layer
 
@@ -88,7 +88,7 @@ At power up the master will first send six `FCE1 - PRIMARY_PRESENCE - linkready1
 
 At power up the slaves will repeatedly send `FDE2 - SECONDARY_PRESENCE` every 6 seconds to advertise their presence.
 
-When the master sees a slaves `FDE2 - SECONDARY_PRESENCE` it will save it details and add the slave to it regular polling sequence.  The master's polling sequence will start with a `FBE0 - PRIMARY_HEARTBEAT` message addressed to the slave.  When the slave see this it will cease sending `FDE2 - SECONDARY_PRESENCE` messages and will reply to the master with a `FDE0 - SECONDARY_HEARTBEAT`.
+When the master sees a slaves `FDE2 - SECONDARY_PRESENCE` it will save the slaves details and add the slave to it regular polling sequence.  The master's polling sequence will start with a `FBE0 - PRIMARY_HEARTBEAT` message addressed to the slave.  When the slave see this it will cease sending `FDE2 - SECONDARY_PRESENCE` messages and will reply to the master with a `FDE0 - SECONDARY_HEARTBEAT`.
 
 If a slaves stops seeing a poll from a master for about 30 seconds it will resume sending `FDE2 - SECONDARY_PRESENCE` messages.
 
@@ -98,7 +98,7 @@ This layer relates to how fields in messages are formatted.  In the case of the 
 
 16 and 32 bit integers are in big-endian order format which processing code will need to convert to the local processor's endian order.
 
-String should be null terminated unless that take up the full space in the field.
+String should be null terminated unless they take up the full space in the field.
 
 Unused and padding fields are filled with zeros.
 
@@ -111,7 +111,7 @@ This is the complete messages.  The first 16 bits of all messages is the `Comman
 ## Messages
 
 As detailed in the Network layer section there are three general message types:
-*	A 13 byte request with a destination ID and 6 byte payload.
+*	A 16 byte request, or SECONDARY_HEARTBEAT reply, with a destination ID.
 *	A 16 byte short reply with a 11 byte payload.
 *	A 20 byte long reply with a 15 byte payload
 
