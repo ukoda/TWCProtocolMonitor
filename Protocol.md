@@ -47,7 +47,7 @@ A request for information or a command:
 * 16 bits - Command
 * 16 bits - Sender's ID
 * 16 bits - Destination's ID
-* 6 bytes - Command specific payload
+* 9 bytes - Command specific payload
 * 8 bits - Checksum
 
 A short reply or broadcast:
