@@ -1,0 +1,423 @@
+Watching for data from TWCs
+16:31:47.556 (+42.757) Message 1
+Ignored: ()
+Response:    FC E1 79 73 76 00 00 00 00 00 00 00 00 00 00 43
+  Command:   FCE1   PRIMARY_PRESENCE - linkready1
+  TWCID:     7973
+    Sign:            76
+    Allowed current: 0.00A
+
+16:31:48.559 (+1.003) Message 2
+Ignored: (FC)
+Response:    FC E1 79 73 76 00 00 00 00 00 00 00 00 00 00 43
+  Command:   FCE1   PRIMARY_PRESENCE - linkready1
+  TWCID:     7973
+    Sign:            76
+    Allowed current: 0.00A
+
+16:31:49.461 (+0.902) Message 3
+Ignored: (FC)
+Response:    FC E1 79 73 76 00 00 00 00 00 00 00 00 00 00 43
+  Command:   FCE1   PRIMARY_PRESENCE - linkready1
+  TWCID:     7973
+    Sign:            76
+    Allowed current: 0.00A
+
+16:31:50.064 (+0.602) Message 4
+Ignored: (FC)
+Response:    FC E1 79 73 76 00 00 00 00 00 00 00 00 00 00 43
+  Command:   FCE1   PRIMARY_PRESENCE - linkready1
+  TWCID:     7973
+    Sign:            76
+    Allowed current: 0.00A
+
+16:31:50.766 (+0.702) Message 5
+Ignored: (FC)
+Response:    FC E1 79 73 76 00 00 00 00 00 00 00 00 00 00 43
+  Command:   FCE1   PRIMARY_PRESENCE - linkready1
+  TWCID:     7973
+    Sign:            76
+    Allowed current: 0.00A
+
+16:31:51.418 (+0.652) Message 6
+Ignored: (FC)
+Response:    FC E1 79 73 76 00 00 00 00 00 00 00 00 00 00 43
+  Command:   FCE1   PRIMARY_PRESENCE - linkready1
+  TWCID:     7973
+    Sign:            76
+    Allowed current: 0.00A
+
+16:31:52.722 (+1.303) Message 7
+Ignored: (FC)
+Response:    FB E2 79 73 76 00 00 00 00 00 00 00 00 00 00 44
+  Command:   FBE2   PRIMARY_PRESENCE2 - linkready2
+  TWCID:     7973
+    Sign:            76
+    Allowed current: 0.00A
+
+16:31:53.323 (+0.601) Message 8
+Ignored: (FC)
+Response:    FB E2 79 73 76 00 00 00 00 00 00 00 00 00 00 44
+  Command:   FBE2   PRIMARY_PRESENCE2 - linkready2
+  TWCID:     7973
+    Sign:            76
+    Allowed current: 0.00A
+
+16:31:53.625 (+0.301) Message 9
+Ignored: (FC)
+Response:    FB E2 79 73 76 00 00 00 00 00 00 00 00 00 00 44
+  Command:   FBE2   PRIMARY_PRESENCE2 - linkready2
+  TWCID:     7973
+    Sign:            76
+    Allowed current: 0.00A
+
+16:31:54.328 (+0.702) Message 10
+Ignored: (FC)
+Ex response: FD EB 79 73 00 00 00 0B 00 F3 00 00 00 00 00 00 00 00 00 D5
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         243V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:31:56.233 (+1.905) Message 11
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F3 00 00 00 00 00 00 00 00 00 D5
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         243V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:31:58.239 (+2.005) Message 12
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F3 00 00 00 00 00 00 00 00 00 D5
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         243V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:00.244 (+2.005) Message 13
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F2 00 00 00 00 00 00 00 00 00 D4
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         242V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:02.250 (+2.005) Message 14
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F2 00 00 00 00 00 00 00 00 00 D4
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         242V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:04.255 (+2.005) Message 15
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F2 00 00 00 00 00 00 00 00 00 D4
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         242V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:06.261 (+2.005) Message 16
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F2 00 00 00 00 00 00 00 00 00 D4
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         242V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:08.267 (+2.005) Message 17
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F1 00 00 00 00 00 00 00 00 00 D3
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         241V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:10.223 (+1.955) Message 18
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F1 00 00 00 00 00 00 00 00 00 D3
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         241V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:12.229 (+2.005) Message 19
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F1 00 00 00 00 00 00 00 00 00 D3
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         241V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:14.235 (+2.005) Message 20
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F1 00 00 00 00 00 00 00 00 00 D3
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         241V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:16.241 (+2.005) Message 21
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F2 00 00 00 00 00 00 00 00 00 D4
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         242V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:18.246 (+2.005) Message 22
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F1 00 00 00 00 00 00 00 00 00 D3
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         241V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:20.251 (+2.005) Message 23
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F1 00 00 00 00 00 00 00 00 00 D3
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         241V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:22.257 (+2.005) Message 24
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F2 00 00 00 00 00 00 00 00 00 D4
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         242V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:24.262 (+2.005) Message 25
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F1 00 00 00 00 00 00 00 00 00 D3
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         241V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:26.268 (+2.005) Message 26
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F2 00 00 00 00 00 00 00 00 00 D4
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         242V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:28.224 (+1.955) Message 27
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F1 00 00 00 00 00 00 00 00 00 D3
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         241V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:30.229 (+2.005) Message 28
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F1 00 00 00 00 00 00 00 00 00 D3
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         241V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:32.234 (+2.005) Message 29
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F1 00 00 00 00 00 00 00 00 00 D3
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         241V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:34.240 (+2.005) Message 30
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F1 00 00 00 00 00 00 00 00 00 D3
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         241V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:36.245 (+2.005) Message 31
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F2 00 00 00 00 00 00 00 00 00 D4
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         242V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:38.251 (+2.005) Message 32
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F2 00 00 00 00 00 00 00 00 00 D4
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         242V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:40.256 (+2.005) Message 33
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F2 00 00 00 00 00 00 00 00 00 D4
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         242V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:42.262 (+2.005) Message 34
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F1 00 00 00 00 00 00 00 00 00 D3
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         241V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:44.268 (+2.005) Message 35
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F2 00 00 00 00 00 00 00 00 00 D4
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         242V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:46.223 (+1.955) Message 36
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F2 00 00 00 00 00 00 00 00 00 D4
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         242V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:48.229 (+2.005) Message 37
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F2 00 00 00 00 00 00 00 00 00 D4
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         242V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:50.234 (+2.005) Message 38
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F2 00 00 00 00 00 00 00 00 00 D4
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         242V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:52.240 (+2.005) Message 39
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F2 00 00 00 00 00 00 00 00 00 D4
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         242V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:54.245 (+2.005) Message 40
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F2 00 00 00 00 00 00 00 00 00 D4
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         242V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:56.251 (+2.005) Message 41
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F2 00 00 00 00 00 00 00 00 00 D4
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         242V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:32:58.257 (+2.005) Message 42
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F2 00 00 00 00 00 00 00 00 00 D4
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         242V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:33:00.262 (+2.005) Message 43
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F2 00 00 00 00 00 00 00 00 00 D4
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         242V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+
+16:33:02.268 (+2.005) Message 44
+Ignored: (FE)
+Ex response: FD EB 79 73 00 00 00 0B 00 F2 00 00 00 00 00 00 00 00 00 D4
+  Command:   FDEB   RESP_PWR_STATUS
+  TWCID:     7973
+    Total power:     11kWh
+    Phase 1:         242V   0A
+    Phase 2:           0V   0A
+    Phase 3:           0V   0A
+

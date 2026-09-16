@@ -1,0 +1,123 @@
+Watching for data from TWCs
+11:05:44.078 (+2.457) Message 1
+Ignored: ()
+Response:    FD E2 34 95 8E 0C 80 00 00 00 00 00 00 00 00 C5
+  Command:   FDE2   SECONDARY_PRESENCE
+  TWCID:     3495
+    Sign:            8E
+    Allowed current: 32.00A
+
+11:05:50.094 (+6.015) Message 2
+Ignored: (FC)
+Response:    FD E2 34 95 8E 0C 80 00 00 00 00 00 00 00 00 C5
+  Command:   FDE2   SECONDARY_PRESENCE
+  TWCID:     3495
+    Sign:            8E
+    Allowed current: 32.00A
+
+11:05:56.159 (+6.065) Message 3
+Ignored: (FC)
+Response:    FD E2 34 95 8E 0C 80 00 00 00 00 00 00 00 00 C5
+  Command:   FDE2   SECONDARY_PRESENCE
+  TWCID:     3495
+    Sign:            8E
+    Allowed current: 32.00A
+
+11:05:58.866 (+2.707) Message 4
+Ignored: (FC)
+Response:    FD E2 34 95 8E 0C 80 00 00 00 00 00 00 00 00 C5
+  Command:   FDE2   SECONDARY_PRESENCE
+  TWCID:     3495
+    Sign:            8E
+    Allowed current: 32.00A
+
+11:05:59.268 (+0.401) Message 5
+Ignored: (FC)
+Response:    FD E2 34 95 8E 0C 80 00 00 00 00 00 00 00 00 C5
+  Command:   FDE2   SECONDARY_PRESENCE
+  TWCID:     3495
+    Sign:            8E
+    Allowed current: 32.00A
+
+11:05:59.870 (+0.602) Message 6
+Ignored: (FC)
+Response:    FD E2 34 95 8E 0C 80 00 00 00 00 00 00 00 00 C5
+  Command:   FDE2   SECONDARY_PRESENCE
+  TWCID:     3495
+    Sign:            8E
+    Allowed current: 32.00A
+
+11:06:00.873 (+1.003) Message 7
+Ignored: (FC)
+Response:    FD E2 34 95 8E 0C 80 00 00 00 00 00 00 00 00 C5
+  Command:   FDE2   SECONDARY_PRESENCE
+  TWCID:     3495
+    Sign:            8E
+    Allowed current: 32.00A
+
+11:06:01.375 (+0.501) Message 8
+Ignored: (FC)
+Response:    FD E2 34 95 8E 0C 80 00 00 00 00 00 00 00 00 C5
+  Command:   FDE2   SECONDARY_PRESENCE
+  TWCID:     3495
+    Sign:            8E
+    Allowed current: 32.00A
+
+11:06:01.776 (+0.401) Message 9
+Ignored: (FC)
+Response:    FD E2 34 95 8E 0C 80 00 00 00 00 00 00 00 00 C5
+  Command:   FDE2   SECONDARY_PRESENCE
+  TWCID:     3495
+    Sign:            8E
+    Allowed current: 32.00A
+
+#  Rest button held down until LEDs changed
+
+11:06:06.639 (+4.862) Message 10
+Ignored: (FC)
+Response:    FD E2 34 95 5B 0C 80 00 00 00 00 00 00 00 00 92
+  Command:   FDE2   SECONDARY_PRESENCE
+  TWCID:     3495
+    Sign:            5B
+    Allowed current: 32.00A
+
+11:06:07.141 (+0.502) Message 11
+Ignored: (FC)
+Response:    FD E2 34 95 5B 0C 80 00 00 00 00 00 00 00 00 92
+  Command:   FDE2   SECONDARY_PRESENCE
+  TWCID:     3495
+    Sign:            5B
+    Allowed current: 32.00A
+
+11:06:07.693 (+0.552) Message 12
+Ignored: (FC)
+Response:    FD E2 34 95 5B 0C 80 00 00 00 00 00 00 00 00 92
+  Command:   FDE2   SECONDARY_PRESENCE
+  TWCID:     3495
+    Sign:            5B
+    Allowed current: 32.00A
+
+11:06:13.708 (+6.015) Message 13
+Ignored: (FC)
+Response:    FD E2 34 95 5B 0C 80 00 00 00 00 00 00 00 00 92
+  Command:   FDE2   SECONDARY_PRESENCE
+  TWCID:     3495
+    Sign:            5B
+    Allowed current: 32.00A
+
+11:06:19.623 (+5.914) Message 14
+Ignored: (FC)
+Response:    FD E2 34 95 5B 0C 80 00 00 00 00 00 00 00 00 92
+  Command:   FDE2   SECONDARY_PRESENCE
+  TWCID:     3495
+    Sign:            5B
+    Allowed current: 32.00A
+
+11:06:25.739 (+6.115) Message 15
+Ignored: (FC)
+Response:    FD E2 34 95 5B 0C 80 00 00 00 00 00 00 00 00 92
+  Command:   FDE2   SECONDARY_PRESENCE
+  TWCID:     3495
+    Sign:            5B
+    Allowed current: 32.00A
+
