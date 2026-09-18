@@ -51,5 +51,5 @@ Response:    FD E0 34 95 79 73 00 00 00 00 00 00 00 00 00 95
 ## To do
 
 This program is complete enough to be useful as is.  Remain to do, but not a priority, are:
-*   Serial numbers and VIN numbers are not decoded.
+*   VIN numbers are not decoded.
 *   Tag related to message length is misleading, probably should just show length.

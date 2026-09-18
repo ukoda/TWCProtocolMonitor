@@ -22,7 +22,6 @@
 #   https://e2e.ti.com/blogs_/b/analogwire/archive/2016/07/28/rs-485-basics-when-termination-is-necessary-and-how-to-do-it-properly
 #
 # TODO:
-#   Serial numbers and VIN numbers are not decoded.
 #   Tag related to message length is misleading, probably should just show length.
 #
 ################################################################################
