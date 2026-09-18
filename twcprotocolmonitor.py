@@ -298,6 +298,7 @@ def print_msg(msg):
     elif cmd == 0xfded:
         print('  RESP_SERIAL_NUMBER')
         print(f'  TWCID:     {msg[2]:02X}{msg[3]:02X}')
+        print(f'    Serial number:   {msg[4:15].decode(encoding="utf-8")}')
 
     elif cmd == 0xfdee:
         print('  RESP_VIN_FIRST')
