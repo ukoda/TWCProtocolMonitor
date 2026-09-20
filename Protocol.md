@@ -115,6 +115,8 @@ As detailed in the Network layer section there are three general message types:
 *	A 16 byte short reply with a 11 byte payload.
 *	A 20 byte long reply with a 15 byte payload
 
+NB: The term `Master` and `Primary` are used interchangeably, as are `Slave` and `Secondary`.
+
 | Command | Name | Length | Payload |
 | :------ | :--- | :----- | :------ |
 | | Requests with master and slave IDs | | |
@@ -181,11 +183,25 @@ PRIMARY_HEARTBEAT.
 | 0 - 1 | Command | 0xFBE0 |
 | 2 - 3 | Master ID | Source |
 | 4 - 5 | Slave ID | Destination |
-| 6 | State | 0x00 = No current limit. 0x09 = Limit to 'Maximum current' |
-| 7 - 8 | Maximum current | In 10mA units, i.e. multiply by 100 for Amps |
-| 9 | Plugged in | |
+| 6 | State | See below |
+| 7 - 8 | Maximum current or error code depending on state| Current is 10mA units, i.e. multiply by 100 for Amps |
+| 9 | 0 = Unplugged, 1 = Plugged in | |
 | 10 - 14 | 5 x zeros | |
 | 15 | Checksum | |
+
+The State byte can be:
+| State | Meaning |
+| :---- | :------ |
+| 0x00 | Make no change |
+| 0x02 | Set error state on slave.  Will require reset to clear |
+| | 0000 0001 Blink red LED 3 times, means 'Incorrect rotary switch setting' |
+| | 0000 0010 Blink red LED 5 times, means 'More than three Wall Connectors are set to Slave'|
+| | 0000 0100 Blink red LED 6 times, means 'The networked Wall Connectors have different maximum current capabilities' |
+| 0x05 | Set slave current limit to 'Max Current' before the car has started charging.  Send in response to slave state 0x04 heartbeat with 'Maximum current' set to 0. |
+| 0x06 | Increase charge current by 2 amps.  Slave changes its heartbeat state to 0x06 in response. After 44 seconds, slave state changes to 0x0A but amp value doesn't change |
+| 0x07 | Lower charge current by 2 amps. Slave changes its heartbeat state to 0x07 in response. After 10 seconds, slave raises its amp setting back up by 2A and changes state to 0x0A, unless it doesn't want the extra current |
+| 0x08 | Master acknowledges that slave stopped charging, but maximum current contain an amp value the slave could be using |
+| 0x09 | Tell slave charger to limit power to 'Max current'.
 
 Has destination slave ID from which it it expects a [0xFDE0](#0xfde0) SECONDARY_HEARTBEAT response.
 
@@ -252,12 +268,21 @@ This message not normally seen, as the [0xFDED](#0xfded) RESP_SERIAL_NUMBER mess
 
 RESP_MODEL_NUMBER.
 
+The expected format is:
 | Bytes | Contents | Notes |
 | :---- | :------- | :---- |
 | 0 - 1 | Command | 0xFD1A |
 | 2 - 3 | ID | Source |
 | 4 - 18| Model number | A string that may not be zero terminated |
 | 19 | Checksum | |
+
+The actual format seen is:
+| Bytes | Contents | Notes |
+| :---- | :------- | :---- |
+| 0 - 1 | Command | 0xFD1A |
+| 2 - 12| Model number | A string that may not be zero terminated |
+| 13 | Checksum | |
+May be protocol 1?  Model number seen 'EVW2T32HLC'.
 
 ### 0xFD1B
 
@@ -293,18 +318,37 @@ Known plug states are:
 
 ### 0xFDE0
 
-SECONDARY_HEARTBEAT.
+SECONDARY_HEARTBEAT - Slave heartbeat
 
 | Bytes | Contents | Notes |
 | :---- | :------- | :---- |
 | 0 - 1 | Command | 0xFDE0 |
 | 2 - 3 | Slave ID | Source |
 | 4 - 5 | Master ID | Destination |
-| 6 | State | 0x00 = No current limit. 0x09 = Limit to 'Maximum current' |
+| 6 | State | See below |
 | 7 - 8 | Maximum current | In 10mA units, i.e. multiply by 100 for Amps |
 | 9 - 10 | Actual current | In 10mA units, i.e. multiply by 100 for Amps |
 | 11 - 14 | 4 x zeros | |
 | 15 | Checksum | |
+
+The State byte can be:
+| State | Meaning |
+| :---- | :------ |
+| 0x00 | Ready |
+| 0x01 | Plugged in, charging |
+| 0x02 | Error. Such as not seeing the master recently |
+| 0x03 | Plugged in, do not charge.  Can be transient, seen at end of charge or charging stop by vehicle.  It may also remain indefinitely if is master offline for too long while car is charging, in which case you may need to unplug vehicle to recover |
+| 0x04 | Plugged in, ready to charge or charge scheduled |
+| | Set Maximum current to 0 to request maximum available current if not already given a max value on a master 0x05 or 0x08 heartbeat state |
+| | Set Maximum current to value to confirm maximum sent in earlier master heartbeat state 0x05 earlier. Later master sends state 0x00 with 0 values to ok that current use |
+| 0x05 | Busy? Transient only last 1 second |
+| 0x06 | Response to primary heartbeat state 6 to increase current by 2 A. 'Maximum current' will show the new current value |
+| 0x07 | Response to primary heartbeat state 7 to increase current by 2 A. 'Maximum current' will show the new current value |
+| 0x08 | Starting to charge? This state may remain for a few seconds while car ramps up from 0A to 1.3A, then state usually changes to 0x01. Sometimes car skips 0x08 and goes directly to 0x01 |
+| | Set Maximum current to 0 to request maximum available current if not already given a max value on a master 0x05 or 0x08 heartbeat state |
+| | Set Maximum current to value to confirm maximum sent in earlier master heartbeat state 0x05 earlier. Later master sends state 0x00 with 0 values to ok that current use |
+| 0x09 | Response to primary heartbeat state 9. 'Maximum current' will confirm the new current value |
+| 0x0A | Amp adjustment period complete. Master uses state 0x06 and 0x07 to raise or lower the slave by 2A temporarily.  When that temporary period is over, it changes state to 0A. |
 
 Sent as a reply to a [0xFBE0](#0xfbe0) PRIMARY_HEARTBEAT.
 

@@ -153,13 +153,25 @@ def print_msg(msg):
         print(f'  SRC TWCID:  {msg[2]:02X}{msg[3]:02X}')
         print(f'  DST TWCID:  {msg[4]:02X}{msg[5]:02X}')
         print(f'    State:           {msg[6]:02X}', end=" ")
-        if msg[6] == 0x09:
-            print('Limit to max current')
-        elif msg[6] == 0x00:
-            print('No current limit')
+        if msg[6] == 0x00:
+            print('Make no change')
+        elif msg[6] == 0x02:
+            print('Set error LED')
+            print(f'    Error pattern:   {msg[7]:08b}')
+        elif msg[6] == 0x05:
+            print('Set future max current limit')
+        elif msg[6] == 0x06:
+            print('Set max current limit 2A higher')
+        elif msg[6] == 0x07:
+            print('Set max current limit 2A lower')
+        elif msg[6] == 0x08:
+            print('Set potential max current limit')
+        elif msg[6] == 0x09:
+            print('Set active max current limit')
         else:
             print('Unknown state')
-        print(f'    Max current:     {currentasstr(msg[7], msg[8])}A')
+        if msg[6] == 0x05 or msg[6] == 0x08 or msg[6] == 0x09:
+            print(f'    Max current:     {currentasstr(msg[7], msg[8])}A')
         print(f'    Plug inserted:   {msg[9]:02X}')
 
     elif cmd == 0xfbe2:
@@ -234,7 +246,8 @@ def print_msg(msg):
 
     elif cmd == 0xfd1a:
         print('  RESP_MODEL_NUMBER')
-        print(f'  TWCID:     {msg[2]:02X}{msg[3]:02X}')
+#        print(f'  TWCID:     {msg[2]:02X}{msg[3]:02X}')
+        print(f'    Model number:    {msg[2:12].decode(encoding="utf-8")}')
 
     elif cmd == 0xfd1b:
         print('  RESP_FIRMWARE_VER')
@@ -259,10 +272,28 @@ def print_msg(msg):
         print(f'  SRC TWCID:  {msg[2]:02X}{msg[3]:02X}')
         print(f'  DST TWCID:  {msg[4]:02X}{msg[5]:02X}')
         print(f'    State:           {msg[6]:02X}', end=" ")
-        if msg[6] == 0x09:
-            print('Limit to max current')
-        elif msg[6] == 0x00:
-            print('No current limit')
+        if msg[6] == 0x00:
+            print('Ready')
+        elif msg[6] == 0x01:
+            print('Plugged in, charging')
+        elif msg[6] == 0x02:
+            print('Error mode')
+        elif msg[6] == 0x03:
+            print('Plugged in, not ready to charge')
+        elif msg[6] == 0x04:
+            print('Plugged in, ready to charge')
+        elif msg[6] == 0x05:
+            print('Busy')
+        elif msg[6] == 0x06:
+            print('Increased max current by 2A')
+        elif msg[6] == 0x07:
+            print('Decreased max current by 2A')
+        elif msg[6] == 0x08:
+            print('Charging started')
+        elif msg[6] == 0x09:
+            print('Confiming max current limit')
+        elif msg[6] == 0x0A:
+            print('Completed adjustment of max current limit')
         else:
             print('Unknown state')
         print(f'    Max current:     {currentasstr(msg[7], msg[8])}A')
